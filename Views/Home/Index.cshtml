@@ -17,21 +17,35 @@
     <title>@ViewData["Title"] - la_mia_pizzeria_static</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/la_mia_pizzeria_static.styles.css" asp-append-version="true" />
-</head>
-
-<section class="text-center" id="pizza-library">
-    <div class="container">
-        <div class="row">
-            @foreach (Pizza pizza  in menu)
-            {
-                <div class="col-3">
-                    <img class="img-fluid" src="@pizza.ImgPath" alt="@pizza.Name" />
-                    <h3>@pizza.Name</h3>
-                    <span>Price : @pizza.Price</span>
-                    <p>@pizza.Description</p>
-                </div>
-            }
+@*    <link rel="stylesheet" href="~/la_mia_pizzeria_static.styles.css" asp-append-version="true" />
+*@</head>
+<body>
+    <header class="d-flex justify-content-around py-4">
+        <div class="header-left">
+            logo pizzeria
         </div>
-    </div>
-</section>
+        <div>
+            barra di navigazione
+        </div>
+    </header>
+    <section class="text-center bg-dark bg-gradient text-white py-5" id="pizza-library">
+        <div class="container">
+            <div class="row">
+                @foreach (Pizza pizza  in menu)
+                {
+                    <div class="col-3">
+                        <div class="card bg-dark bg-gradient text-white border-2 border-white">
+                            <img class="img-fluid" src="@pizza.ImgPath" alt="@pizza.Name" />
+                            <h3 class="py-1">@pizza.Name</h3>
+                            <span class="py-1">Price : @pizza.Price $</span>
+                            <p class="px-2"> Ingredienti: <small>@pizza.Description</small></p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <footer class="text-center py-5">
+        <span>Made with &hearts; by ME</span>
+    </footer>
+</body>
