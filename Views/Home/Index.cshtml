@@ -11,23 +11,7 @@
     menu.Add(quattroFormaggi);
 }
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - la_mia_pizzeria_static</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-@*    <link rel="stylesheet" href="~/la_mia_pizzeria_static.styles.css" asp-append-version="true" />
-*@</head>
 <body>
-    <header class="d-flex justify-content-around py-4">
-        <div class="header-left">
-            logo pizzeria
-        </div>
-        <div>
-            <a asp-controller="Esercizi" asp-action="Index">Link Esercizi</a>
-        </div>
-    </header>
     <section class="text-center bg-dark bg-gradient text-white py-5" id="pizza-library">
         <div class="container">
             <div class="row">
@@ -45,7 +29,4 @@
             </div>
         </div>
     </section>
-    <footer class="text-center py-5">
-        <span>Made with &hearts; by ME</span>
-    </footer>
 </body>
